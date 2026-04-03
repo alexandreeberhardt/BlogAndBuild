@@ -71,6 +71,7 @@ main {
 .manifesto-band,
 .articles-section,
 .about-section,
+.site-footer,
 .article-shell {
   width: min(calc(100% - 2rem), var(--content-width));
   margin-inline: auto;
@@ -446,6 +447,21 @@ main {
   line-height: 1.85;
 }
 
+.site-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .article-page {
   padding-bottom: 4rem;
 }
@@ -463,7 +479,9 @@ main {
   grid-template-columns: 160px minmax(0, 1fr) 240px;
   gap: 1.5rem;
   align-items: start;
+  padding-bottom: 2rem;
   margin-bottom: 2.2rem;
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .article-hero > div {
@@ -485,6 +503,7 @@ main {
 .article-sidecard {
   grid-column: 3;
   padding-top: 0.4rem;
+  border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
   padding-left: 1rem;
 }
@@ -509,6 +528,11 @@ main {
   margin: 2.5rem 0 0.9rem;
   font-size: clamp(1.7rem, 3.5vw, 2.6rem);
   line-height: 0.98;
+}
+
+.article-body h2:not(:first-of-type) {
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
 }
 
 .article-body p,
